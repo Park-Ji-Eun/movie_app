@@ -1,11 +1,20 @@
 import React from 'react';
-import Test from './Test'
+
+function Fruit({fav}) {
+  return (
+    <h1>I like {fav}!!</h1>
+  );
+}
 
 function App() {
   return (
     <div> 
       <h1>Hello!</h1>
-      <Test />
+      <Fruit fav = "apple"/>
+      <Fruit fav = "strawberry"/>
+      <Fruit fav = "peach"/>
+      <Fruit fav = "orange"/>
+      <Fruit fav = "grape"/>
     </div>
   );
 }
