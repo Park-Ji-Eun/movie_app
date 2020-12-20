@@ -1,8 +1,12 @@
 import React from 'react';
+import Test from './Test'
 
 function App() {
   return (
-    <div> Hello! </div>
+    <div> 
+      <h1>Hello!</h1>
+      <Test />
+    </div>
   );
 }
 
