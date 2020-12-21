@@ -19,26 +19,24 @@ class App extends React.Component {
     const {isLoading, movies} = this.state;
     return (
       <section class="container">
-        {isLoading
-          ? (
-            <div class="loader">
-              <span class="loader__text">Loading...</span>
-            </div>
-          ) : movies.map(movie => {
-              return (
-                <div class="movies">
-                  <Movie
-                  key={movie.id} 
-                  id={movie.id}
-                  year={movie.year}
-                  title={movie.title}
-                  summary={movie.summary}
-                  poster={movie.medium_cover_image}
-                  />
-                </div>
-              );
-            })
-        }
+        {isLoading ? (
+          <div class="loader">
+            <span class="loader__text">Loading...</span>
+          </div>
+        ) : (
+          <div class="movies">
+            {movies.map(movie => (
+              <Movie
+                key={movie.id}
+                id={movie.id}
+                year={movie.year}
+                title={movie.title}
+                summary={movie.summary}
+                poster={movie.medium_cover_image}
+              />
+            ))}
+          </div>
+        )}
       </section>
     );
   }
