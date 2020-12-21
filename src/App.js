@@ -5,7 +5,7 @@ import Movie from "./Movie";
 class App extends React.Component {
   state = {
     isLoading: true,
-    moview: []
+    movies: []
   };
   getMovies = async () => {
     const {data: {data: {movies}}} = await axios.get("https://yts-proxy.now.sh/list_movies.json?sort_by=rating");
